@@ -1,10 +1,9 @@
 import { Router } from 'express'
+import { createSession } from '../controllers/payment.controller.js'
 
 const router = Router()
 
-router.get('/session', (req, res) => {
-    res.send('<p>checkout session</p>')
-})
+router.get('/session', createSession)
 
 router.get('/success', (req, res) => {
     res.send('<p>Success payment</p>')

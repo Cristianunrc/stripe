@@ -3,7 +3,7 @@ import { createSession } from '../controllers/payment.controller.js'
 
 const router = Router()
 
-router.get('/session', createSession)
+router.post('/session', createSession)
 
 router.get('/success', (req, res) => {
     res.send('<p>Success payment</p>')
